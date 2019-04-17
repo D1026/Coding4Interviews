@@ -1,23 +1,16 @@
 
 
 def replaceSpace(s):
-    # write code here
-    s_len = len(s)
-    space_count = 0
+    sl = []
     for i in s:
-        if i == ' ':
-            space_count += 1
-    s_len += 2 * space_count
-    new_array = [' '] * s_len
-    j = 0
-    for i in range(len(s)):
-        if s[i] == ' ':
-            new_array[j] = '%'
-            new_array[j+1] = '2'
-            new_array[j+2] = '0'
-            j += 3
-        else:
-            new_array[j] = s[i]
-            j += 1
-    return ''.join(new_array)
+        sl.append(i)
+    for index in range(len(sl)):
+        if sl[index] == ' ':
+            sl[index] = '%20'
+    return ''.join(sl)
 print(replaceSpace('We Are Happy'))
+
+# python built in type 'str'
+s = 'SKT T1 have won the World Championship three times'
+ss = s.replace(' ', '%20')
+print(ss)

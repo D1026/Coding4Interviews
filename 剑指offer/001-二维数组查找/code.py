@@ -1,15 +1,17 @@
 
-def find(target, array):
-    i = 0
-    j = len(array[0]) - 1
-    while i < len(array) and j >= 0:
-        base = array[i][j]
-        if target == base:
-            return True
-        elif target > base: 
+def find(array, tar):
+    row = len(array)
+    col = len(array[0])
+    i, j = 0, col-1
+    while i < row and j >= 0:
+        if array[i][j] < tar:
             i += 1
         else:
-            j -= 1
-    return False
+            if array[i][j] > tar:
+                j -= 1
+                i = 0
+            else:
+                return (i, j)
+    return (-1, -1)
 
-print(find(4,[[1,2,8,9],[2,4,9,12],[4,7,10,13],[6,8,11,15]]))
+print(find([[1,2,8,9],[2,4,9,12],[4,7,10,13],[6,8,11,15]], 0))
