@@ -28,10 +28,27 @@ P为给定的二维平面整数点集。定义 P 中某点x，如果x满足 P �
 9 0
 """
 from numpy import array
+detype = [('x', int), ('y', int)]
 n = int(input())
-points = array([(0, 0)]*n, dtype=int)
+points = array([(0, 0)]*n, dtype=detype)
 for i in range(n):
-    points[i] = eval(input())
+    points[i] = eval(','.join(input().split()))
 
 print(points)
 print(type(points))
+
+points.sort(order='x')
+print(points)
+
+maxes = []
+for point in points:
+    flag = 1
+    for i in range(n):
+        if points[i]['x'] > point['x'] and points[i]['y'] > point['y']:
+            flag = 0
+            break
+    if flag:
+       maxes.append(point)
+
+for max in maxes:
+    print(max[0], max[1])
