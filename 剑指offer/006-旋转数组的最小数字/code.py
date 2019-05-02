@@ -13,6 +13,8 @@ def minNumberInRotateArray(rotateArray):
         if rotateArray[mid] < rotateArray[mid-1]:
             return rotateArray[mid]
 
-print(minNumberInRotateArray([3,4,5,1,2]))
+print(minNumberInRotateArray([2, 3, 1]))
 print(minNumberInRotateArray([1,1,1,0,1]))
 print(minNumberInRotateArray([]))
+
+# --- 原作者这个解法是错的，最后 left, mid, right 是三个相邻元素时，算法无限循环不会收敛 ---
