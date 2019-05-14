@@ -5,13 +5,14 @@ def quickSort(x):
     v = x[0]
     i, j = 1, len(x)-1
     while True:
-        while x[i] < v and i < len(x)-1:
+        while x[i] <= v and i < len(x)-1:
             i += 1
-        while x[j] > v and j > 1:
+        while x[j] >= v and j > 1:
             j -= 1
         if i >= j:
             break
         x[i], x[j] = x[j], x[i]
+
     print(x, 'j=', j)
     if x[j] < v:
         x[0], x[j] = x[j], x[0]
@@ -24,9 +25,9 @@ def quickSort(x):
     quickSort(x[p+1:])
     return x
 
-print('---', quickSort(np.array([13, 7, 7, 11, 7, 2, 1])))
+print('---', quickSort(np.array([13, 7, 7, 4, 4, 4, 4, 11, 7, 2, 1])))
 # --- x[a:b] 是 x 的切片， 而 a = x[a:b], a 是 x[a:b] 的一个拷贝
 # 引用作为切片存在， 必须用 numpy.array()
 
-qs = lambda xs: ((len(xs) <= 1 and [xs]) or [qs( [x for x in xs[1:] if x < xs[0]] ) + [xs[0]] + qs( [x for x in xs[1:] if x >= xs[0]] ) ] )[0]
-print('---', qs([13, 7, 7, 11, 7, 2, 1]))
+qs = lambda xs: ((len(xs) <= 1 and [xs]) or [qs([x for x in xs[1:] if x < xs[0]]) + [xs[0]] + qs([x for x in xs[1:] if x >= xs[0]])])[0]
+print('---', qs([13, 7, 7, 4, 4, 4, 4, 11, 7, 2, 1]))
