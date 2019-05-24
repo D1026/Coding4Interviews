@@ -1,6 +1,6 @@
 def printMatrix(matrix):
     # write code here
-    walked = [[False] * (len(matrix[0])+1) for _ in range(len(matrix)+1)]
+    walked = [[False] * (len(matrix[0])+1) for _ in range(len(matrix)+1)]   # 包上一层 假设访问过的 外圈
     for j in range(len(walked[-1])):
         walked[-1][j] = True
     for i in range(len(walked)):
