@@ -25,9 +25,9 @@ def quickSort(x):
     quickSort(x[p+1:])
     return x
 
-print('---', quickSort(np.array([13, 7, 7, 4, 4, 4, 4, 11, 7, 2, 1])))
+print('---', quickSort(np.array([13, 7, 10, 4, 4, 4, 4, 11, 7, 2, 1])))
 # --- x[a:b] 是 x 的切片， 而 a = x[a:b], a 是 x[a:b] 的一个拷贝
-# 引用作为切片存在， 必须用 numpy.array()
+# 引用作为切片存在， 必须用 numpy.array(), 不开辟额外空间的就地快排 需要在最初调用函数时 传入numpy.array
 
 qs = lambda xs: ((len(xs) <= 1 and [xs]) or [qs([x for x in xs[1:] if x < xs[0]]) + [xs[0]] + qs([x for x in xs[1:] if x >= xs[0]])])[0]
-print('---', qs([13, 7, 7, 4, 4, 4, 4, 11, 7, 2, 1]))
+print('---', qs([13, 7, 10, 4, 4, 4, 4, 11, 7, 2, 1]))
