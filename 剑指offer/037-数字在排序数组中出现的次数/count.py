@@ -22,10 +22,12 @@ def countN(x, n):
             i = mr
         if x[mr] > n:
             j = mr
-        if x[j] == n and (j == len(x)-1 or x[j+1] > n):
-            end = j
+        if x[i] == n and (i == len(x)-1 or x[i+1] > n):
+            end = i
             break
-
+    print('start: ', start, ' end: ', end)
     return (end-start+1)
 
 print(countN([1, 3, 5, 5, 7, 7, 7, 8], 7))
+print(countN([1, 3, 5, 5, 7, 7, 8], 1))
+print(countN([1, 3, 5, 5, 7, 7, 7, 8], 9))
