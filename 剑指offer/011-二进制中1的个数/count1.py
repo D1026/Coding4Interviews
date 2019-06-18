@@ -3,6 +3,7 @@ s = n & (n-1)
 print(bin(n))
 print(bin(n-1))
 print(bin(s))
+print(bin(n ^ (n-1)))
 # --- output ---
 # -0b1
 # -0b10
