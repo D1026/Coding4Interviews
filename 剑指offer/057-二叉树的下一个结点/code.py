@@ -3,7 +3,7 @@ class TreeLinkNode:
         self.val = x
         self.left = None
         self.right = None
-        self.next = None
+        self.next = None    # 父指针
 
 class Solution:
     def GetNext(self, pNode):

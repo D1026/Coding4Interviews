@@ -14,6 +14,11 @@ def isEqual(p1, p2):
 
 class Solution:
     def isSymmetrical(self, pRoot):
+        """
+        层次遍历比较
+        :param pRoot:
+        :return:
+        """
         # write code here
         if not pRoot: return True
         queue = [pRoot]
