@@ -17,3 +17,6 @@ class Solution:
                 continue
             res.append(num[queue[0]])
         return res
+
+sol = Solution()
+print(sol.maxInWindows([1,2,3,4,5,6], 2))
