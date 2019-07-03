@@ -13,19 +13,21 @@ def quickSort(x):
             break
         x[i], x[j] = x[j], x[i]
 
-    print(x, 'j=', j)
+    # print(x, 'j=', j)
     if x[j] < v:
         x[0], x[j] = x[j], x[0]
         p = j
     else:
         x[0], x[j-1] = x[j-1], x[0]
         p = j-1
-    print(x)
+    # print(x)
     quickSort(x[:p])
     quickSort(x[p+1:])
     return x
 
 print('---', quickSort(np.array([13, 7, 10, 4, 4, 4, 4, 11, 7, 2, 1])))
+print(quickSort(np.array([3, 2, 1])))
+print(quickSort(np.array([2, 1])))
 # --- x[a:b] 是 x 的切片， 而 a = x[a:b], a 是 x[a:b] 的一个拷贝
 # 引用作为切片存在， 必须用 numpy.array(), 不开辟额外空间的就地快排 需要在最初调用函数时 传入numpy.array
 
