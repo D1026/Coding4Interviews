@@ -18,6 +18,7 @@ Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.
 
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, numbers: list[int], target: int) -> list[int]:
         i, j = 0, 0
-        
+
+
