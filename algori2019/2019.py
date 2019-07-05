@@ -5,6 +5,18 @@
 --就是说，每头牛都会在他（出生那一年算作第一年）的 第三年 到 第七年 每年 生一头 小牛，第 11 年死亡
 求 n 年牛数
 """
+# - zyson -
+def cows(n):
+    res = [0,0,0,0,0,0,0,0,0,1]
+    born = [0,0,0,0,0,0,0,0,0,1]
+    for i in range(1, n):
+        temp = res[-1]+sum(born[4:9]) - born[0]
+        born = born[1:] + [sum(born[4:9])]
+        res = res[1:]+[temp]
+    return res[-1]
+
+# - -
+
 # n = int(input())
 # if n < 3:
 #     print(1)
@@ -50,6 +62,25 @@
 给出解的个数
 （点都是整数）
 """
+# - zyson -
+n = 5
+example = [1,2,3,4,5]
+d = 2
+n_list = sorted(example)
+tail = 0
+res = 0
+for index, num in enumerate(n_list):
+    if tail < index:
+        tail = index
+    while tail < n-1:
+        if n_list[tail+1] >= d+num:
+            break
+        tail += 1
+    large_num = tail-index+1
+    res += large_num*(large_num-1)/2
+res
+
+# - -
 n, d = eval(','.join(input().split()))
 p = input().split()
 ps = []
