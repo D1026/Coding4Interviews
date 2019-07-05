@@ -85,3 +85,58 @@ else:
 每场比赛 胜者得 3 分，负者得 0 分，平局则双方各得 1 分，
 输出：小组赛 比赛结果 的所有 可能得分情况，（不区别球队，只求得分 不同组合的数目，例如 9 4 4 1 与 1 4 4 9视为一种情况）
 """
+
+
+# --- baiD ---
+"""
+1、旋转数组的最小数，需要处理单调非减数组（[1, 2, 3, 4]，数字重复（如 [1, 1, 1, 0, 1])等情况
+    主体思路：二分查找锁定 相邻逆序所在区间
+    边界情况：空数组，元素个数为1（包含在有序里），有序（旋转长度为0）
+"""
+
+
+def getMin(array):
+    # len(array) <= 1
+    if not array:
+        return None
+    if len(array) == 1:
+        return array[0]
+
+    # 是否为单调不减数组（即旋转数组长度为0）,
+    sorted = True
+    for i in range(len(array)-1):
+        if array[i] > array[i+1]:
+            sorted = False
+            break
+    if sorted is True:
+         return array[0]
+
+    left = 0
+    right = len(array) - 1
+    mid = (left + right) // 2
+    while True:
+        # if array[mid] >= array[left] and array[mid] <= array[right]:
+        #     return array[0]
+        # 无法处理[1,1,1,0,1]，检查是否顺序 应该搜索到底，放在while True 外面
+
+        if right == left + 1:
+            return array[right]
+        if array[mid] >= array[left]:
+            left = mid
+        else:
+            right = mid
+        mid = (left + right) // 2
+
+
+print(getMin([4, 5, 6, 1, 2, 3]))
+print(getMin([1, 1, 1, 0, 1]))
+
+"""
+2、
+4个数字能否通过 + - X / 四则运算得到 24，
+我没思路，问穷举暴力解法；暴力解法 加括号方式多少种
+N 个数（或 M 个括号）加括号 有多少种方法，卡特兰数 https://www.zhihu.com/question/57224946
+"""
+
+# --- 看重基础， 数据结构算法，分析问题能力，特点：问的哪里会想一个相关的算法问题，四则运算 聊到 暴力解 延伸到 波兰数
+# 感觉投算法岗没什么希望了。。
