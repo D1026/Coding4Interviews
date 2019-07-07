@@ -1,6 +1,6 @@
 """
-发饼干，每个孩子会满足的饼干尺寸 child []
-拥有的饼干 cookie []
+发饼干，每个孩子会满足的饼干尺寸 g []
+拥有的饼干 s []
 输出最多能满足几个孩子，
 
 Note:
@@ -21,4 +21,19 @@ Explanation: You have 2 children and 3 cookies. The greed factors of 2 children 
 You have 3 cookies and their sizes are big enough to gratify all of the children,
 You need to output 2.
 """
+
+
+class Solution:
+    def findContentChildren(self, g, s):
+        g.sort()
+        s.sort()
+        content = 0
+        while g and s:
+            if s[-1] < g[-1]:
+                g.pop()
+            else:
+                s.pop()
+                g.pop()
+                content += 1
+        return content
 
