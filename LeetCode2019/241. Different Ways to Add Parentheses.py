@@ -25,5 +25,23 @@ Explanation:
 
 
 class Solution:
-    def diffWaysToCompute(self, input: str) -> List[int]:
-        pass
+    def helper(self, opr, x, y):
+        if opr == '+':
+            return x + y
+        elif opr == '-':
+            return x - y
+        else:
+            return x * y
+
+    def diffWaysToCompute(self, input: str):
+        if input.isdigit():
+            return [int(input)]
+        res = []
+        for i in range(len(input)):
+            if input[i] in '+-*':
+                x = self.diffWaysToCompute(input[:i])
+                y = self.diffWaysToCompute(input[i+1:])
+                for a in x:
+                    for b in y:
+                        res.append(self.helper(input[i], a, b))
+        return res
