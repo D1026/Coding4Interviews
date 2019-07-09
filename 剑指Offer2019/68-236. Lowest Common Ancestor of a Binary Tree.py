@@ -29,7 +29,19 @@ class Solution(object):
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
+"""
+DFS
+"""
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
-        pass
+        if root is None:
+            return None
+        if root in (p, q):
+            return root
+
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+
+        if left and right:
+            return root
+        return left if left is not None else right
