@@ -32,30 +32,42 @@
 
 
 # --- 关于 [] * int 扩展 ---
-flag = [[False] * 3] * 4
-print(flag)
-i, j = 0, 0
-print(flag[i][j])
-flag[i][j] = True
-print(flag)
-# --- output:[[True, False, False], [True, False, False], [True, False, False], [True, False, False]]
-print(id(flag[0]))
-print(id(flag[1]))
-print(id(flag[0]) == id(flag[1]), id(flag[0]) == id(flag[2]))
-# 2364702089864
-# 2364702089864
-# True True
+# flag = [[False] * 3] * 4
+# print(flag)
+# i, j = 0, 0
+# print(flag[i][j])
+# flag[i][j] = True
+# print(flag)
+# # --- output:[[True, False, False], [True, False, False], [True, False, False], [True, False, False]]
+# print(id(flag[0]))
+# print(id(flag[1]))
+# print(id(flag[0]) == id(flag[1]), id(flag[0]) == id(flag[2]))
+# # 2364702089864
+# # 2364702089864
+# # True True
+#
+# a = [0]*4
+# print(a)    # [0, 0, 0, 0]
+# print(id(a[0]) == id(a[1]))    # True
+# a[1] = 1
+# print(id(a[0]) == id(a[1]))    # False
+# print(a)    # [0, 1, 0, 0]
+#
+# b = [[4] * 4] * 3
+# print(b, type(b))   # [[4, 4, 4, 4], [4, 4, 4, 4], [4, 4, 4, 4]] <class 'list'>
+# print(id(b[0]) == id(b[1]))    # True
+# b[1][1] = 1
+# print(id(b[0]) == id(b[1]))    # True
+# print(b)    # [[4, 1, 4, 4], [4, 1, 4, 4], [4, 1, 4, 4]]
 
-a = [0]*4
-print(a)    # [0, 0, 0, 0]
-print(id(a[0]) == id(a[1]))    # True
-a[1] = 1
-print(id(a[0]) == id(a[1]))    # False
-print(a)    # [0, 1, 0, 0]
-
-b = [[4] * 4] * 3
-print(b, type(b))   # [[4, 4, 4, 4], [4, 4, 4, 4], [4, 4, 4, 4]] <class 'list'>
-print(id(b[0]) == id(b[1]))    # True
-b[1][1] = 1
-print(id(b[0]) == id(b[1]))    # True
-print(b)    # [[4, 1, 4, 4], [4, 1, 4, 4], [4, 1, 4, 4]]
+def steps(n):
+    count = 0
+    if n == 1: return count
+    from math import sqrt
+    while n > 1:
+        temp = int(sqrt(n))
+        count += n - temp*temp
+        n = temp
+        count += 1
+    return count-1
+print(steps(27))
