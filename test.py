@@ -60,14 +60,44 @@
 # print(id(b[0]) == id(b[1]))    # True
 # print(b)    # [[4, 1, 4, 4], [4, 1, 4, 4], [4, 1, 4, 4]]
 
-def steps(n):
-    count = 0
-    if n == 1: return count
-    from math import sqrt
-    while n > 1:
-        temp = int(sqrt(n))
-        count += n - temp*temp
-        n = temp
-        count += 1
-    return count-1
-print(steps(27))
+# def steps(n):
+#     count = 0
+#     if n == 1: return count
+#     from math import sqrt
+#     while n > 1:
+#         temp = int(sqrt(n))
+#         count += n - temp*temp
+#         n = temp
+#         count += 1
+#     return count-1
+# print(steps(27))
+
+# -----
+def times(s):
+    if not s:
+        return 0
+    u, v = 5, 6
+    t_move = 0
+    t_pres = len(s)
+    for i in range(len(s)//2):
+        x = int(s[2*i])
+        y = int(s[2*i+1])
+        t1 = abs(max(x, y) - max(u, v))
+        t2 = abs(min(x, y) - min(u, v))
+        t_move += max(t1, t2)
+        # if x in (u, v) and y in (u, v):
+        #     t_pres += 2
+        # elif x in (u, v) or y in (u, v):
+        #     t_pres += 1
+        # else:
+        #     t_pres += 0
+    if len(s)//2 != 0:
+        last = int(s[-1])
+        t_move += min(abs(last-u), abs(last-v))
+        t_pres += 0 if last in (u, v) else 1
+
+    return t_move+t_move
+
+print(times('56'))
+
+

@@ -22,6 +22,8 @@ class Solution:
         queue, m, n = [(matrix[0][0], 0, 0)], len(matrix[0]), len(matrix)   # 堆中元素为元组，直接按元组<方法比较
         for i in range(k):
             mymin, i, j = heapq.heappop(queue)
-            if i == 0 and j + 1 < m: heapq.heappush(queue, (matrix[i][j + 1], i, j + 1))
-            if i + 1 < n: heapq.heappush(queue, (matrix[i + 1][j], i + 1, j))
+            if i == 0 and j + 1 < m:
+                heapq.heappush(queue, (matrix[i][j + 1], i, j + 1))
+            if i + 1 < n:
+                heapq.heappush(queue, (matrix[i + 1][j], i + 1, j))
         return mymin
