@@ -1,5 +1,6 @@
 """
-利用后序遍历，自下而上，每个节点只用计算一次其深度
+利用后序遍历，自下而上，每个节点只用计算一次其深度，
+（想了想这种写法根本没意义，递归每个也是每个节点算一次）
 """
 
 
@@ -36,7 +37,11 @@ def travPost(root):
 
 # --------------------------------'
 """
-递归式，平衡返回深度，不平衡返回-1"""
+递归式，平衡返回深度，不平衡返回-1
+Runtime: 48 ms, faster than 98.82% of Python3 online submissions for Balanced Binary Tree.
+Memory Usage: 17.8 MB, less than 87.20% of Python3 online submissions for Balanced Binary Tree.
+"""
+
 def getDeep(x):
     if x is None:
         return 0
