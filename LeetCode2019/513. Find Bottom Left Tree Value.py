@@ -36,4 +36,29 @@ Note: You may assume the tree (i.e., the given root node) is not NULL.
 
 class Solution:
     def findBottomLeftValue(self, root) -> int:
-        pass
+        if not root:
+            return None
+        que = []
+        res = []
+        que.append(root)
+        que.append('#')
+        res.append('#')
+        while que:
+            p = que.pop(0)
+            if not que and p == '#':
+                break
+            if p == '#':
+                que.append('#')
+                res.append('#')
+                continue
+            res.append(p.val)
+            if p.left:
+                que.append(p.left)
+            if p.right:
+                que.append(p.right)
+
+        for i in range(-1, -len(res)-1, -1):
+            if res[i] == '#':
+                return res[i+1]
+
+
