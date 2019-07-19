@@ -43,7 +43,7 @@ class Solution:
         res = []
 
         while s:
-            if s[-1].left != x and s[-1].right != x:
+            if s[-1].left != x and s[-1].right != x:    # s[-1] 为其右兄
                 self.gotoHLVFL(s)
             x = s.pop()
             res.append(x.val)
