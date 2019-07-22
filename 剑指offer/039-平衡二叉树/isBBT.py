@@ -53,5 +53,5 @@ def getDeep(x):
         return -1
     return -1 if abs(left-right) > 1 else 1 + max(left, right)
 
-def isBST(root):
+def isBBT(root):
     return getDeep(root) != -1

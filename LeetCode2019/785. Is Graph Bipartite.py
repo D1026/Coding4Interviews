@@ -40,4 +40,3 @@ The graph is undirected: if any element j is in graph[i], then i will be in grap
 
 class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
-        
