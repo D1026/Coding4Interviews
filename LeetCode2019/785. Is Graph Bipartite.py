@@ -39,4 +39,19 @@ The graph is undirected: if any element j is in graph[i], then i will be in grap
 
 
 class Solution:
+    def dfs(self, node_i, color, colors, graph):
+        if colors[node_i] != -1:
+            return colors[node_i] == color
+
+        colors[node_i] = color
+        for neighbor in graph[node_i]:
+            if not self.dfs(neighbor, 1-color, colors, graph):
+                return False
+        return True
+
     def isBipartite(self, graph: List[List[int]]) -> bool:
+        colors = [-1] * len(graph)
+        for i in range(len(graph)):
+            if colors[i] == -1 and not self.dfs(i, 0, colors, graph):
+                return False
+        return True
