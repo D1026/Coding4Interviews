@@ -25,4 +25,22 @@ You may assume that there are no duplicate edges in the input prerequisites.
 
 class Solution:
     def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
-        pass
+        edges = {i: [] for i in range(numCourses)}
+        degrees = [0] * numCourses
+        for i, j in prerequisites:
+            edges[j].append(i)  # j -> i
+            degrees[i] += 1    # i 的入度
+
+        que, count = [], 0
+        for i in range(numCourses):
+            if degrees[i] == 0:
+                que.append(i)
+        while que:
+            node = que.pop(0)
+            count += 1
+            for neighbor in edges[node]:
+                degrees[neighbor] -= 1
+                if degrees[neighbor] == 0:
+                    que.append(neighbor)
+
+        return count == numCourses
