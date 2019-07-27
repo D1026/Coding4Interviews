@@ -19,26 +19,7 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
 思路1、使用快排划分，
 思路2、使用最大堆
 剪纸offer-29"""
-# class Solution:
-#     def findKthLargest(self, nums, k):
-#         if len(nums) < k:
-#             return None
-#         v = nums[0]
-#         les = []
-#         mor = []
-#         for e in nums[1:]:
-#             if e >= v:
-#                 mor.append(e)
-#             else:
-#                 les.append(e)
-#         if len(mor) >= k:
-#             return self.findKthLargest(mor, k)
-#         if len(mor) == k-1:
-#             return v
-#         if len(mor) < k-1:
-#             return self.findKthLargest(les, k-len(mor)-1)
-#
-# print(Solution().findKthLargest([3,2,3,1,2,4,5,5,6], 4))
+
 
 # 快慢指针qsort
 class Solution:

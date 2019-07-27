@@ -21,7 +21,7 @@ def maxContinu1(x):
 
 print(maxContinu1([-1, 2, 4, 1, 0, -3]))
 
-# 动态规划
+# 动态规划 --- 下面答案是错的
 def maxContinuSum(x):
     sum = 0
     for i in range(len(x)):
@@ -34,4 +34,4 @@ def maxContinuSum(x):
         # print(sum)
     return sum
 
-print(maxContinuSum([-1, 2, 4, 1, 0, -3]))
+print(maxContinuSum([-1, 2, 4, 1, 0, -3, 5]))

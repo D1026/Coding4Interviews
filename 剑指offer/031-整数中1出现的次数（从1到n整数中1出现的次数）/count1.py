@@ -5,20 +5,21 @@
 ② 第 i 位为1：由高低位同时决定， (高位数 x 10^i) + 低位数+1
 ③ 第 i 位 > 1: 由高位决定， (高位数+1) x 10^i
 """
-def count(x):
-    counter = 0
-    num = x
-    for i in range(len(str(num))):
-        digit = num // pow(10, i) % pow(10, i+1)
-        high = num//pow(10, i+1)
-        low = num % pow(10, i)
-        if digit == 0:
-            counter += high * pow(10, i)
-        if digit == 1:
-            counter += high * pow(10, i) + low+1
-        if digit > 1:
-            counter += (high+1) * pow(10, i)
-    return counter
+class Solution:
+    def countDigitOne(self, n: int) -> int:
+        counter = 0
+        l = len(str(n))
+        for i in range(l):
+            digit = n // pow(10, i) % 10
+            high = n//pow(10, i+1)
+            low =n % pow(10, i)
+            if digit == 0:
+                counter += high * pow(10, i)
+            if digit == 1:
+                counter += high * pow(10, i) + low+1
+            if digit > 1:
+                counter += (high+1) * pow(10, i)
+        return counter
 
-print(count(12))
-print(count(123))
+print(Solution().countDigitOne(13))
+print(Solution().countDigitOne(123))
