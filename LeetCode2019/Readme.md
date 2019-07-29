@@ -94,12 +94,12 @@ LeetCode collection.
 |          |86. Partition List  ||
 |          |206. Reverse Linked List  ||
 |          |92. Reverse Linked List II  ||
-|          |25. Reverse Nodes in k-Group  |没做出来，要重新看一遍|
-|          |234. Palindrome Linked List 回文  |不会|
+|          |25. Reverse Nodes in k-Group  ||
+|          |234. Palindrome Linked List 回文  ||
 |          |83. Remove Duplicates from Sorted List  ||
 |          |82. Remove Duplicates from Sorted List II  ||
 |          |287. Find the Duplicate Number 兔子和乌龟 ||
-|          |61. Rotate List  还没做||
+|          |61. Rotate List  ||
 |          |  ||
 |          |  ||
 |          |  ||
@@ -119,13 +119,13 @@ LeetCode collection.
 |          |735. Asteroid Collision  ||
 |          |503. Next Greater Element II  ||
 |          |739. Daily Temperatures  ||
-|          |239. Sliding Window Maximum 还没做，优先考虑用队列的方法 ||
+|          |239. Sliding Window Maximum 优先考虑用队列的方法 ||
 |          |224. Basic Calculator  ||
 |          |456. 132 Pattern  ||
 |          |402. Remove K Digits  ||
 |          |946. Validate Stack Sequences  ||
-|          |621. Task Scheduler  还没做 ||
-|          |622. Design Circular Queue  还没做 ||
+|          |621. Task Scheduler   ||
+|          |622. Design Circular Queue   ||
 |          |  ||
 |          |  ||
 |          |  ||
@@ -158,7 +158,7 @@ LeetCode collection.
 |          |102. Binary Tree Level Order Traversal  这个一道BFS||
 |          |107. Binary Tree Level Order Traversal II  ||
 |          |103. Binary Tree Zigzag Level Order Traversal  ||
-|          |105. Construct Binary Tree from Preorder and Inorder Traversal 这题不太理解本质 ||
+|          |105. Construct Binary Tree from Preorder and Inorder Traversal  ||
 |          |108. Convert Sorted Array to Binary Search Tree  ||
 |          |109. Convert Sorted List to Binary Search Tree  ||
 |          |111. Minimum Depth of Binary Tree ||
@@ -167,9 +167,9 @@ LeetCode collection.
 |          |437. Path Sum III  ||
 |          |235. Lowest Common Ancestor of a Binary Search Tree  ||
 |          |236. Lowest Common Ancestor of a Binary Tree  ||
-|          |230. Kth Smallest Element in a BST 还没做  ||
-|          |450. Delete Node in a BST 还没做  ||
-|          |938. Range Sum of BST 还没做  ||
+|          |230. Kth Smallest Element in a BST   ||
+|          |450. Delete Node in a BST   ||
+|          |938. Range Sum of BST   ||
 |          |  ||
 |          |  ||
 |          |  ||
@@ -185,8 +185,8 @@ LeetCode collection.
 |          |23. Merge k Sorted Lists  ||
 |          |295. Find Median from Data Stream  ||
 |          |502. IPO  ||
-|          |451. Sort Characters By Frequency 还没做  ||
-|          |871. Minimum Number of Refueling Stops 还没做  ||
+|          |451. Sort Characters By Frequency   ||
+|          |871. Minimum Number of Refueling Stops   ||
 |          |  ||
 |          |  ||
 |          |  ||
@@ -196,7 +196,7 @@ LeetCode collection.
 |          |200. Number of Islands  ||
 |          |611. Knight Shortest Path  用字典可以记录 见过的点，和对应距离||
 |          |133. Clone Graph  ||
-|          |297. Serialize and Deserialize Binary Tree 这个题还是有点蒙 ||
+|          |297. Serialize and Deserialize Binary Tree  ||
 |          |127. Word Ladder  ||
 |          | 拓扑排序 ||
 |          |207. Course Schedule   ||
@@ -220,12 +220,12 @@ LeetCode collection.
 |          |785. Is Graph Bipartite?  |n|
 |          |417. Pacific Atlantic Water Flow  ||
 |          |329. Longest Increasing Path in a Matrix  ||
-|          |542. 01 Matrix  |n 不会|
+|          |542. 01 Matrix  |n |
 |          |721. Accounts Merge  |考察点，把数据转换成图|
 |          |210. Course Schedule II  ||
 |          |630. Course Schedule III  ||
 |          |997. Find the Town Judge  ||
-|          |407. Trapping Rain Water II 还没做 ||
+|          |407. Trapping Rain Water II  ||
 |          |743. Network Delay Time  ||
 |          |  ||
 |          |  ||
@@ -240,12 +240,12 @@ LeetCode collection.
 |          |167. Two Sum II - Input array is sorted  ||
 |          |21. Merge Two Sorted Lists  ||
 |          |349. Intersection of Two Arrays  ||
-|          |523. Continuous Subarray Sum 不会 ||
+|          |523. Continuous Subarray Sum  ||
 |          |169. Majority Element  ||
 |          |229. Majority Element II  摩尔投票算法||
 |          |75. Sort Colors  荷兰国旗：很经典的一道题||
 |          |11. Container With Most Water 装水的题 ||
-|          |42. Trapping Rain Water  | 不会 |
+|          |42. Trapping Rain Water  |  |
 |          |15. 3Sum  ||
 |          |16. 3Sum Closest  ||
 |          |125. Valid Palindrome  ||
@@ -254,20 +254,20 @@ LeetCode collection.
 |          |  ||
 |          |  ||
 |滑动窗口          |  ||
-|          |845. Longest Mountain in Array  |未做|
+|          |845. Longest Mountain in Array  ||
 |          |26. Remove Duplicates from Sorted Array  ||
 |          |80. Remove Duplicates from Sorted Array II  ||
 |          |27. Remove Element  ||
 |          |643. Maximum Average Subarray I  ||
-|          |209. Minimum Size Subarray Sum  | 没有写出来，清醒的时候重新写|
+|          |209. Minimum Size Subarray Sum  | |
 |          |28. Implement strStr()  ||
 |          |713. Subarray Product Less Than K  ||
 |          |3. Longest Substring Without Repeating Characters  ||
 |          |438. Find All Anagrams in a String  ||
 |          |76. Minimum Window Substring  ||
-|          |159. Longest Substring with At Most Two Distinct Characters  |还没做|
-|          |340. Longest Substring with At Most K Distinct Characters  |还没做|
-|          |239. Sliding Window Maximum  可以用堆 |还没做|
+|          |159. Longest Substring with At Most Two Distinct Characters  ||
+|          |340. Longest Substring with At Most K Distinct Characters  ||
+|          |239. Sliding Window Maximum  可以用堆 ||
 |          |  ||
 |          |  ||
 |动态规划          |  ||
@@ -277,7 +277,7 @@ LeetCode collection.
 |          |746. Min Cost Climbing Stairs  ||
 |          |96. Unique Binary Search Trees  |科特兰数|
 |          |714. Best Time to Buy and Sell Stock with Transaction Fee  ||
-|          |309. Best Time to Buy and Sell Stock with Cooldown  还没做 ||
+|          |309. Best Time to Buy and Sell Stock with Cooldown   ||
 |          |32. Longest Valid Parentheses 还没做  ||
 |          |72. Edit Distance 还没做  ||
 |          |70. Climbing Stairs 还没做  ||
@@ -302,7 +302,7 @@ LeetCode collection.
 |          |121. Best Time to Buy and Sell Stock  ||
 |          |122. Best Time to Buy and Sell Stock II  ||
 |          |123. Best Time to Buy and Sell Stock III  ||
-|          |188. Best Time to Buy and Sell Stock IV 还没做 ||
+|          |188. Best Time to Buy and Sell Stock IV  ||
 |          |300. Longest Increasing Subsequence   ||
 |          |354. Russian Doll Envelopes 是300的二维问题  ||
 |       |划分型动态规划            ||
@@ -316,7 +316,7 @@ LeetCode collection.
 |          |Lint-563. Backpack V 计数型 ||
 |          |Lint-564. Combination Sum IV 计数型 ||
 |          |Lint-125. Backpack II 最值型 ||
-|          |Lint-440. Backpack III 最值型  这一题可以一维数组把空间优化到极致，见视频讲解||
+|          |Lint-440. Backpack III 最值型  这一题可以一维数组把空间优化到极致，见讲解||
 |          |  ||
 |       |区间型动态规划  | 取头 取尾|
 |          |516. Longest Palindromic Subsequence  在区间问题中，要按照区间长度的顺序计算||
@@ -332,10 +332,10 @@ LeetCode collection.
 |          |10. Regular Expression Matching  ||
 |          |474. Ones and Zeroes  ||
 |          |115. Distinct Subsequences  ||
-|          |44. Wildcard Matching 还没做 ||
+|          |44. Wildcard Matching  ||
 |       | 动态规划难题专场 ||
 |          |221. Maximal Square  ||
-|          |639. Decode Ways II 还没做 ||
+|          |639. Decode Ways II  ||
 |          |Lint-752. Rogue Knight Sven  ||
 |          |Lint-971. Surplus Value Backpack 这道题不用掌握  ||
 |          |Lint-89. k Sum  ||
@@ -351,12 +351,12 @@ LeetCode collection.
 | 位操作          |  ||
 |          |29. Divide Two Integers  ||
 |          |191. Number of 1 Bits  ||
-|          |405. Convert a Number to Hexadecimal  不会 ||
+|          |405. Convert a Number to Hexadecimal   ||
 |          |231. Power of Two  ||
 |          |268. Missing Number  ||
-|          |397. Integer Replacement 还没做 ||
+|          |397. Integer Replacement  ||
 |          |371. Sum of Two Integers  ||
-|          |172. Factorial Trailing Zeroes 还没做 ||
+|          |172. Factorial Trailing Zeroes  ||
 |          |  ||
 |          |  ||
 |          |  ||
@@ -373,15 +373,15 @@ LeetCode collection.
 |          |5. Longest Palindromic Substring  ||
 |          |242. Valid Anagram  ||
 |          |796. Rotate String  ||
-|          |9. Palindrome Number 还没做 ||
+|          |9. Palindrome Number  ||
 |          |409. Longest Palindrome  ||
 |          |266. Palindrome Permutation  ||
 |          |516. Longest Palindromic Subsequence  ||
-|          |524. Longest Word in Dictionary through Deleting 还没做 ||
+|          |524. Longest Word in Dictionary through Deleting  ||
 |          |392. Is Subsequence  ||
-|          |79. Word Search 还没做  ||
-|          |212. Word Search II 还没做  ||
-|          |648. Replace Words 还没做  ||
+|          |79. Word Search   ||
+|          |212. Word Search II   ||
+|          |648. Replace Words   ||
 |          |6. ZigZag Conversion  ||
 |          |8. String to Integer (atoi)  ||
 |          |12. Integer to Roman  ||
