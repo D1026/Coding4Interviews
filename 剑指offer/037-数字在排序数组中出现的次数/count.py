@@ -31,5 +31,6 @@ def countN(x, n):
 print(countN([1, 3, 5, 5, 7, 7, 7, 8], 7))
 print(countN([1, 3, 5, 5, 7, 7, 8], 1))
 print(countN([1, 3, 5, 5, 7, 7, 7, 8], 9))
+print(countN([2, 3], 2))
 
-# len() < 3 有问题
+# len() < 3 有问题, while 控制不越界，mid-1/+1 赋给 i/j，不然边界条件太麻烦了
