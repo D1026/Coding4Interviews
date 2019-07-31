@@ -32,6 +32,39 @@ For the directed graph follow up please see Redundant Connection II). We apologi
 """
 
 
-class Solution:
-    def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
-        pass
+class UnionFindSet(object):
+    def __init__(self):
+        self.parents = list(range(1001))
+        self.rank = [0] * 1001
+
+    def find(self, val):
+        """find with path compression"""
+        if self.parents[val] != val:
+            self.parents[val] = self.find(self.parents[val])
+        return self.parents[val]
+
+    def union(self, v1, v2):
+        """union by rank, check whether union two vertics will lead to a cycle"""
+        p1, p2 = self.find(v1), self.find(v2)
+        if p1 == p2:
+            return True
+        elif self.rank[p1] > self.rank[p2]:
+            self.parents[p2] = p1
+        elif self.rank[p1] < self.rank[p2]:
+            self.parents[p1] = p2
+        else:
+            self.rank[p2] += 1
+            self.parents[p1] = p2
+        return False
+
+
+class Solution(object):
+    def findRedundantConnection(self, edges):
+        """
+        :type edges: List[List[int]]
+        :rtype: List[int]
+        """
+        ufs = UnionFindSet()
+        for edge in edges:
+            if ufs.union(edge[0], edge[1]):
+                return edge
