@@ -31,3 +31,5 @@ def countN(x, n):
 print(countN([1, 3, 5, 5, 7, 7, 7, 8], 7))
 print(countN([1, 3, 5, 5, 7, 7, 8], 1))
 print(countN([1, 3, 5, 5, 7, 7, 7, 8], 9))
+
+# len() < 3 有问题
