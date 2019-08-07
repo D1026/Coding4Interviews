@@ -23,4 +23,17 @@ Note: The length of each dimension in the given grid does not exceed 50.
 
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-        
+        R, C = len(grid), len(grid[0])
+        def dfs(i, j):
+            if 0 <= i < R and 0 <= j < C and grid[i][j] == 1:
+                grid[i][j] = 0
+                return 1 + dfs(i-1, j) + dfs(i+1, j) + dfs(i, j-1) + dfs(i, j+1)
+            else:
+                return 0
+        res = 0
+        for r in range(R):
+            for c in range(C):
+                if grid[r][c] == 1:
+                    res = max(res, dfs(r, c))
+
+        return res
